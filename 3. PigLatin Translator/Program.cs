@@ -22,17 +22,50 @@ Example: Awesome = Awesome +way = Awesomeway
         static void Main(string[] args)
         {
            //Logic 
+           // We are assuming that every word has a vowel
+           // We are assuming that every word has a vowel as the 1st, 2nd or 3rd letter
+           
+          //- Step1 find the vowel
+          //- Step2 follow a rule
+          
+
+    // Step 1
+
+  int VowelPostion = -1;
+   foreach ( char letter in word )
+       {
+           VowelPostion = VowelPostion +1;
+            if ( letter == 'a' || letter == 'e' ||  letter == 'i' ||  letter == 'o' || letter == 'u' || )
+          {
+            break;
+           }
+         
+      }
+
+            //Step 2
+
+   string PigLatinWord = "";
+   string BeforeLetters = "";
+   string AfterLetters = "";
+   
+   switch (VowelPostion)
+   {
+     case 0;
+     //rule 1 - add "way" 
+    
+     PigLatinWord = Word + "way";
+     break;
+
+      case 1;
+      //rule 2- first letter at end + "ay";
+      
+      BeforeLetters = Word.Substring(0, 1);
+      AfterLetters =  Word.Substring(1);
+      PigLatinWord = AfterLetters + BeforeLetters + "ay";
+
+    }
 
 
-
-
-            {
-            
-
-
-            }
-
-            Console.WriteLine("Thanks for playing!  ... I guess");
 
             Console.ReadKey();
 
