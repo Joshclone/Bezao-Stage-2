@@ -72,14 +72,18 @@ Example: Awesome = Awesome +way = Awesomeway
       PigLatinWord = AfterLetters + BeforeLetters + "ay";
       break;
 
+
+      default:
+      PigLatinWord = "Unable to translate";
+      break;
     }
       
      Console.WriteLine("Translation: " + PigLatinWord);
      Console.WriteLine();
  
-
-
-            Console.ReadKey();
+     Console.WriteLine("--- Press any key to exist ---");
+   
+     Console.ReadKey();
 
     }
   }
