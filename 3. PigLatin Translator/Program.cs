@@ -50,30 +50,40 @@ Example: Awesome = Awesome +way = Awesomeway
    
    switch (VowelPostion)
    {
-     case 0;
+     case 0:
      //rule 1 - add "way" 
     
      PigLatinWord = Word + "way";
      break;
 
-      case 1;
+      case 1:
       //rule 2- first letter at end + "ay";
       
       BeforeLetters = Word.Substring(0, 1);
       AfterLetters =  Word.Substring(1);
       PigLatinWord = AfterLetters + BeforeLetters + "ay";
+      break;
+
+      case 2: 
+      //rule 3 - 2 consonants add to end + "ay"
+
+      BeforeLetters = Word.Substring(0, 2);
+      AfterLetters =  Word.Substring(2);
+      PigLatinWord = AfterLetters + BeforeLetters + "ay";
+      break;
 
     }
-
+      
+     Console.WriteLine("Translation: " + PigLatinWord);
+     Console.WriteLine();
+ 
 
 
             Console.ReadKey();
 
-
-
-
-        }
     }
-
-
+  }
 }
+
+
+      
