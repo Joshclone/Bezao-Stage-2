@@ -1,77 +1,43 @@
-﻿
+
 using System;
 
 namespace GuessGame
+
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Random random = new Random();
-            bool playAgain = true;
-            int min = 1;
-            int max = 100;
-            int guess;
-            int number;
-            int guesses;
-            String response;
+
+            int count = 0;
+            int leapyear = 2022;
 
 
-            while (playAgain == true)
+            //this condition checks
+            //if a given year is not century, and it's completely divisible by 4 = leapyear
+            //if a given year is a century, and it's completely divisible by 400 = leapyear, otherwise non leapyear.
+
+            while (count < 20)
+
             {
-                guess = 0;
-                guesses = 0;
-                response = "";
-                number = random.Next(min, max + 1);
 
-                while (guess != number)
+                if (((leapyear % 4 == 0) && (leapyear % 100 != 0)) || (leapyear % 400 == 0))
                 {
-                    Console.WriteLine("Guess a number between " + min + " - " + max + " : ");
-                    guess = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Guess: " + guess);
 
-                    if (guess > number)
-                    {
-                        Console.WriteLine(guess + " is to high!");
-
-                    }
-                    else if (guess < number)
-                    {
-                        Console.WriteLine(guess + " is to low!");
-
-                    }
-                    guesses++;
+                    Console.WriteLine(leapyear);
+                    count++;
                 }
-                Console.WriteLine("Number: " + number);
-                Console.WriteLine("YOU WIN!");
-                Console.WriteLine("Guesses: " + guesses);
-
-                Console.WriteLine("Would you like to play again (Y/N): ");
-
-                response = Console.ReadLine();
-                response = response.ToUpper();
-
-                if (response == "Y")
-                {
-                    playAgain = true;
-                }
-                else
-                {
-                    playAgain = false;
-                }
-
-
+                leapyear++;
             }
-
-            Console.WriteLine("Thanks for playing!  ... I guess");
-
-            Console.ReadKey();
-
-
-
+            Console.ReadLine();
 
         }
+
+
+
+
+
     }
-
-
 }
+
+
