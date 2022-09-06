@@ -1,64 +1,33 @@
 ﻿
 using System;
 
-namespace GuessGame
+namespace PigLatinTranalator
 {
     class Program
     {
+/*
+PigLatin Translator Rules:
+	
+1. If a word starts with a consonant and a vowel, put the first letter of the word at the end of the word and add "ay."
+Example: Happy = appyh + ay = appyhay
+
+2. If a word starts with two consonants move the two consonants to the end of the word and add "ay."
+Example: Child = Ildch + ay = Ildchay
+
+3. If a word starts with a vowel add the word "way" at the end of the word.
+Example: Awesome = Awesome +way = Awesomeway
+
+*/
+
         static void Main(string[] args)
         {
-            Random random = new Random();
-            bool playAgain = true;
-            int min = 1;
-            int max = 100;
-            int guess;
-            int number;
-            int guesses;
-            String response;
+           //Logic 
 
 
-            while (playAgain == true)
+
+
             {
-                guess = 0;
-                guesses = 0;
-                response = "";
-                number = random.Next(min, max + 1);
-
-                while (guess != number)
-                {
-                    Console.WriteLine("Guess a number between " + min + " - " + max + " : ");
-                    guess = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Guess: " + guess);
-
-                    if (guess > number)
-                    {
-                        Console.WriteLine(guess + " is to high!");
-
-                    }
-                    else if (guess < number)
-                    {
-                        Console.WriteLine(guess + " is to low!");
-
-                    }
-                    guesses++;
-                }
-                Console.WriteLine("Number: " + number);
-                Console.WriteLine("YOU WIN!");
-                Console.WriteLine("Guesses: " + guesses);
-
-                Console.WriteLine("Would you like to play again (Y/N): ");
-
-                response = Console.ReadLine();
-                response = response.ToUpper();
-
-                if (response == "Y")
-                {
-                    playAgain = true;
-                }
-                else
-                {
-                    playAgain = false;
-                }
+            
 
 
             }
