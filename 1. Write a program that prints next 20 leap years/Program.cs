@@ -1,43 +1,37 @@
 
 using System;
 
-namespace GuessGame
+namespace LeapYears;
 
-{
-    class Program
+ 
+ public class LeapYearsSolution
+ {
+       
+   public static void Run()
+   {
+       printNext20LeapYears();
+   }
+             
+    private static void printNext20LeapYears()
+
+       {
+          var year =  DateTime.Now.Year;
+          var count = 0; 
+    
+       
+        Console.WriteLine("---- Next Leap Years ----");
+         while (count < 20) 
     {
-        static void Main(string[] args)
-        {
+       year += 1;
+         if (year % 4 == 0)   
+     {
+        Console.WriteLine(" {0}. {1} ", count + 1, year);    
+         count+=1;  
 
-            int count = 0;
-            int leapyear = 2022;
+      }
+     }
 
-
-            //this condition checks
-            //if a given year is not century, and it's completely divisible by 4 = leapyear
-            //if a given year is a century, and it's completely divisible by 400 = leapyear, otherwise non leapyear.
-
-            while (count < 20)
-
-            {
-
-                if (((leapyear % 4 == 0) && (leapyear % 100 != 0)) || (leapyear % 400 == 0))
-                {
-
-                    Console.WriteLine(leapyear);
-                    count++;
-                }
-                leapyear++;
-            }
-            Console.ReadLine();
-
-        }
-
-
-
-
-
-    }
+   }          
 }
 
 
