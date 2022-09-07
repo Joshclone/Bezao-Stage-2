@@ -3,7 +3,6 @@ using System;
 
 namespace LeapYears;
 
- 
  public class LeapYearsSolution
  {
        
@@ -33,5 +32,3 @@ namespace LeapYears;
 
    }          
 }
-
-
